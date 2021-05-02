@@ -1,0 +1,16 @@
+.services-overview-section {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  padding: 15px;
+
+  .services {
+    width: 100%;
+    margin-top: 35px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+  }
+}

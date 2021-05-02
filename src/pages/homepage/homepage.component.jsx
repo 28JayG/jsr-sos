@@ -1,13 +1,19 @@
 import React from 'react';
 
-import PlasmaDonateBanner from '../../components/homepage/plasma-donate-banner/plasma-donate-banner.component';
+import { Route, Switch } from 'react-router';
+import ServicesOverviewSection from '../../components/homepage/services-overview-section/services-overview-section.component';
 
 import './homepage.styles.scss';
 
-const Homepage = () => {
+const Homepage = ({ match }) => {
   return (
     <div className="homepage">
-      <PlasmaDonateBanner />
+      <Switch>
+        {/* uses the path from the url
+        (match property tells everything about url) */}
+        <Route exact path={match.path} component={ServicesOverviewSection} />
+        <Route path={`${match.path}/:servieId`} />
+      </Switch>
     </div>
   );
 };
