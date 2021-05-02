@@ -1,8 +1,16 @@
 @import '../../../styles/colors.scss';
 
-.app-bar-container {
-  width: 100vh;
-  max-width: 100%;
-  height: 80px;
-  background-color: $APP_DARK_BLUE;
+.app-bar-wrapper {
+  .app-bar {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    max-width: 100%;
+    height: 80px;
+    background-color: $APP_DARK_BLUE;
+  }
+
+  margin-top: 80px;
 }
