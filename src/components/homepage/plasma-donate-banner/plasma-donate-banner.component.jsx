@@ -5,6 +5,7 @@ import BannerCallToAction from '../../common/banner-call-to-action/banner-call-t
 import AddResources from '../../common/add-resources/add-resources.component';
 
 import './plasma-donate-banner.styles.scss';
+import ServiceCard from '../../common/service-card/service-card.component';
 
 const PlasmaDonateBanner = () => {
   return (
@@ -18,6 +19,7 @@ const PlasmaDonateBanner = () => {
       </a>
     </section>
     {/* <AddResources>Add Resources</AddResources> */}
+    {/* <ServiceCard/> */}
     </>
   );
 };
