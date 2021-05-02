@@ -1,0 +1,12 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+
+.banner-cta {
+  @extend .app_text-button;
+  background-color: $APP_LIGHT_BLUE;
+  width: 93px;
+  height: 25px;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
