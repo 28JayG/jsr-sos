@@ -1,11 +1,17 @@
 // all the provider will wrap this component
 import { SnackbarProvider } from 'notistack';
-import ServicesProvider from './services/services.provider'
+import DoctorsProvider from './doctor/doctors.provider';
+import HelplinesProvider from './helplines/helplines.provider';
+import ServicesProvider from './services/services.provider';
 
 const RootProvider = ({ children }) => {
   return (
     <SnackbarProvider>
-      <ServicesProvider>{children}</ServicesProvider>
+      <DoctorsProvider>
+        <HelplinesProvider>
+          <ServicesProvider>{children}</ServicesProvider>
+        </HelplinesProvider>
+      </DoctorsProvider>
     </SnackbarProvider>
   );
 };

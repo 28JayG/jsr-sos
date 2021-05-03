@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
-import { fetchServicesAsync } from './services.utils';
+import { fetchServiceOptions, fetchServicesAsync } from './services.utils';
 
 export const ServicesContext = createContext({
   loading: false,
   toggleLoading: () => {},
   services: null,
+  getServiceOptions: () => {},
 });
 
 const ServiceProvider = ({ children }) => {
@@ -32,8 +33,23 @@ const ServiceProvider = ({ children }) => {
     fetchServices();
   }, []);
 
+  const getServiceOptions = async (serviceId) => {
+    //set loading true before fetching
+    setLoading(true);
+    
+    try {
+      const serviceOptions = await fetchServiceOptions(serviceId);
+      return serviceOptions;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <ServicesContext.Provider value={{ services, loading, toggleLoading }}>
+
+    <ServicesContext.Provider value={{ services, loading, toggleLoading, getServiceOptions }}>
       {children}
     </ServicesContext.Provider>
   );
