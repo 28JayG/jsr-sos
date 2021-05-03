@@ -2,14 +2,11 @@
 @import '../../../styles/text.styles.scss';
 
 .banner-ar{
-    background-color: #D8EEF2;
+    background-color: $APP_BANNER;
     width: 100%;
     height: 60px;
     padding: 10px;
     border-radius: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
