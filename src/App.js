@@ -3,6 +3,7 @@ import { InternalRoutes } from './constants/routes';
 import { Route, Switch } from 'react-router';
 import Homepage from './pages/homepage/homepage.component';
 import Doctors from './pages/doctor/doctors.component';
+import Faqpage from './pages/faqpage/faqpage.component';
 import ServiceView from './components/homepage/service-view/service-view.component';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         path={`${InternalRoutes.SERVICES}/:serviceId`}
         component={ServiceView}
       />
+      <Route path={InternalRoutes.FAQS} exact component={Faqpage} />
     </Switch>
   );
 }
