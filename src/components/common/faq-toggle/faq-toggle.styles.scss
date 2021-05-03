@@ -1,0 +1,19 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+
+.faq-toggle{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    .sliding-header-ft{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .sliding-content-ft{
+        padding-top: 20px;
+        color: gray;
+    }
+
+}
