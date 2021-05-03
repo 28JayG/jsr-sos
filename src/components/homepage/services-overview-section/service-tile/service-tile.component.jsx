@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './service-tile.styles.scss';
 
-const ServiceTile = ({ iconUrl, title, route }) => {
+const ServiceTile = ({ iconUrl, title, routeName, match }) => {
+
   return (
-    <Link to={`${route}`} className="service-tile">
+    <Link to={`${match.url}${routeName}`} className="service-tile">
       {/*icon */}
       <div className="icon" style={{ backgroundImage: `url(${iconUrl})` }} />
       <h4 className="title">{title}</h4>
@@ -13,4 +14,4 @@ const ServiceTile = ({ iconUrl, title, route }) => {
   );
 };
 
-export default ServiceTile;
+export default withRouter(ServiceTile);
