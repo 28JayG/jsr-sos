@@ -1,0 +1,28 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+
+.bottom-nav-wrapper{
+    margin-bottom: 60px;
+}
+
+.bottom-nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -5px -2px 6px 0px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+
+    .icon-bn{
+        width: 24px;
+        height: 24px;
+    }
+
+    .text-bn{
+        @extend .app_text-button;
+        text-transform: capitalize;
+    }
+}
