@@ -5,7 +5,7 @@ import ServicesOverviewSection from '../../components/homepage/services-overview
 
 import './homepage.styles.scss';
 
-const Homepage = ({ match }) => {
+const Homepage = () => {
   return (
     <div className="homepage">
       <ServicesOverviewSection />

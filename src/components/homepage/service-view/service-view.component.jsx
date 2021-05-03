@@ -6,26 +6,13 @@ import ServiceOptionCard from '../../common/service-option-card/service-option-c
 import './service-view.styles.scss';
 
 const ServiceView = ({ service, match }) => {
-  const title = match.params.serviceId.replace('-', ' ')
-    
+  const title = match.params.serviceId.replace('_', ' ');//revse the slugify
+
   return (
-    <div className='service'>
+    <div className="service">
       {/* subpage show that the current route is a part of some other route */}
       <AppBar title={title} subPage />
-      <section className="service-options-container">
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-        <ServiceOptionCard />
-      </section>
+      <section className="service-options-container"></section>
     </div>
   );
 };

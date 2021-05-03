@@ -1,11 +1,10 @@
 @import '../../../styles/colors.scss';
 @import '../../../styles/text.styles.scss';
 
-.bottom-nav-wrapper{
-    margin-bottom: 60px;
-}
+.bottom-nav-wrapper {
+  margin-bottom: 60px;
 
-.bottom-nav{
+  .bottom-nav {
     width: 100%;
     height: 60px;
     display: flex;
@@ -16,13 +15,14 @@
     bottom: 0;
     background-color: white;
 
-    .icon-bn{
-        width: 24px;
-        height: 24px;
+    .icon-bn {
+      width: 24px;
+      height: 24px;
     }
 
-    .text-bn{
-        @extend .app_text-button;
-        text-transform: capitalize;
+    .text-bn {
+      @extend .app_text-button;
+      text-transform: capitalize;
     }
+  }
 }
