@@ -21,7 +21,7 @@ export const convertServiesSnapshotToMap = (collection) => {
     return {
       title,
       iconUrl,
-      routeName: title.toLowerCase().replace(' ', '_'),
+      routeName: title.toLowerCase().replace(/ /g, '_'),
       id: doc.id,
     };
   });

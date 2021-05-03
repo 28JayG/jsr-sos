@@ -1,3 +1,9 @@
 import React from 'react';
 
-const 
+const AppIcon = ({ children, }) => {
+
+    const iconsSwitch = (children) => {
+        
+    }
+
+}
