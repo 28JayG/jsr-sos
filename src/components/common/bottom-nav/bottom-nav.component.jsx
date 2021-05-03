@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 const BottomNav = () => {
 
     return (
-
+        <div className="bottom-nav-wrapper">
             <div className="bottom-nav">
                 {Object.values(bottomNavRoutes).map((item) => {
                 return (
@@ -18,6 +18,8 @@ const BottomNav = () => {
                 )
             })}
             </div>
+            </div>
+
     )
 }
 
