@@ -17,7 +17,7 @@
     width: 50px;
     height: 50px;
     background-color: transparent;
-    background-size: 50px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 12px;
@@ -27,5 +27,6 @@
     @extend .app_text-h4;
     color: black;
     text-align: center;
+    text-transform: capitalize;
   }
 }

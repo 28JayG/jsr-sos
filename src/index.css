@@ -1,9 +1,8 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
-:root{
-  --app_body_white: #F6FAFB;
+:root {
+  --app_body_white: #f6fafb;
 }
 
 body {
@@ -17,6 +16,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -26,14 +37,18 @@ code {
 *::after,
 *::before {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-a{
-  color: black;
+a {
+  color: inherit;
   text-decoration: none;
 }
 
-button, button:focus{
+button,
+button:focus {
   outline: none;
   border: 0;
+  padding: 0;
+  margin: 0;
 }

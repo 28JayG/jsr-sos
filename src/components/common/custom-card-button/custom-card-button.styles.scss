@@ -1,0 +1,18 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+
+.btn-common-sc {
+  @extend .app_text-h4;
+  border-radius: 5px;
+  min-width: 70px;
+  padding: 4px 10px;
+  background-color: transparent;
+  text-transform: capitalize;
+  border: 1px solid $APP_LIGHT_BLUE;
+  margin-left: 13px;
+}
+
+.filled {
+  background-color: $APP_LIGHT_BLUE;
+  color: white;
+}
