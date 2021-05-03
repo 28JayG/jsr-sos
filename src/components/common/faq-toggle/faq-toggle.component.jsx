@@ -21,7 +21,7 @@ const FaqToggle = () => {
   const [selected, setSelected] = useState(null);
 
   const handleClick = (index) => {
-    if (selected == index) setSelected(null);
+    if (selected === index) setSelected(null);
     else setSelected(index);
   };
 

@@ -4,12 +4,13 @@ import {
   IconQuestionMark,
   IconStethoscope,
 } from '@tabler/icons';
+
 // in-app routes
 export const InternalRoutes = {
   HOME: '/',
   DOCTOR: '/doctors',
   FAQS: '/faqs',
-  HELPLINE: '/helpline',
+  HELPLINE: '/helplines',
   SERVICES: '/services',
 };
 

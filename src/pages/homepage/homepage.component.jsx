@@ -10,7 +10,6 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <ServicesOverviewSection />
-      <FaqToggle/>
       <BottomNav/>
     </div>
   );
