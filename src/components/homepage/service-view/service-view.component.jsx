@@ -44,8 +44,10 @@ const ServiceView = ({ match }) => {
             ))}
         </section>
         {serviceId === 'vaccines' && (
-          <div className="floating-button">
-            <RegisterForCowin />
+          <div className="fb-wrapper">
+            <div className="floating-button">
+              <RegisterForCowin />
+            </div>
           </div>
         )}
       </MainContainer>

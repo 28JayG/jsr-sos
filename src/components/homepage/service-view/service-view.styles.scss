@@ -3,14 +3,18 @@
     padding: 15px;
   }
 
-  .floating-button {
-    position: fixed;
-    width: 100vw;
-    max-width: 100%;
-    z-index: 2000;
-    left: 0;
-    bottom: 0;
-    padding: 10px 15px;
-    background-color: white;
+  .fb-wrapper {
+    margin-bottom: 65px;
+
+    .floating-button {
+      position: fixed;
+      width: 100vw;
+      max-width: 100%;
+      z-index: 2000;
+      left: 0;
+      bottom: 0;
+      padding: 10px 15px;
+      background-color: white;
+    }
   }
 }
