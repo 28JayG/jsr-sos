@@ -5,7 +5,11 @@ import './register-for-cowin.styles.scss';
 
 const RegisterForCowin = () => {
   return (
-    <a href={ExternalLinks.COWIN_REGISTER_LINK} className="rfc-button">
+    <a
+      href={ExternalLinks.COWIN_REGISTER_LINK}
+      target="_blank"
+      className="rfc-button"
+    >
       Register for COWIN
     </a>
   );
