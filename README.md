@@ -1,5 +1,5 @@
 <p align="center">
-    <img style="margin: 0 0 0 60px" src="" alt="platform logo"/>
+    <img style="margin: 0 0 0 60px" src="https://user-images.githubusercontent.com/43542057/117018835-7fcba080-ad12-11eb-8eae-5c64cc204748.jpeg" alt="platform logo"/>
 </p>
 
 <p align="center">
@@ -16,7 +16,8 @@ Centralised platform for covid-19 relief resources in Jamshedpur
 </p>
 
 <p align="center">
-  <a style="padding: 0 10px;" target="#" href="https://indie-threads.netlify.app/">Website</a>
+  <a style="padding: 0 10px;" target="#" href="https://jsrsos.co.in/![WhatsApp Image 2021-05-04 at 19 44 56](https://user-images.githubusercontent.com/43542057/117018811-7b9f8300-ad12-11eb-8a23-e77b84445f50.jpeg)
+">Website</a>
 </p>
 
 
@@ -31,3 +32,7 @@ Having faced the problem of tracking down verified leads for resources during th
 
 There are a lot of helpful apps/websites out there providing information about necessary resources during these trying times. Then why are adding to this already existing pile of sites? Because all these sites have very few to no leads for my hometown. Some doesn't even have the name Jamshedpur(Jsr) in it. You have to search Jharkhand and see if there are a few of the twitter posts addressed to Jsr. The situation is worsening with each passing day and we had to do soemthing. In an attempt to solve the problem of looking for resources, this a centralised platform for our city.
 
+- [Jay Gandhi](https://github.com/28JayG)
+- [Anjali](https://github.com/anjali-001)
+- [Sumit Kumar](https://github.com/sumitkumar-dev)
+- [Kunal Kumar](https://github.com/kunal015)
