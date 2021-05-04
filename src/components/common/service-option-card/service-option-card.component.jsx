@@ -7,6 +7,7 @@ import { Dialog, DialogTitle } from '@material-ui/core';
 import GetDirections from './get-directions/get-directions.component';
 
 import './service-option-card.styles.scss';
+import { checkPhoneNumberNotEmpty } from '../../../utils/utils';
 
 const ServiceOptionCard = ({
   id,
@@ -14,6 +15,7 @@ const ServiceOptionCard = ({
   is_verified,
   verification_date,
   phone_number,
+  address,
   hideDirection,
 }) => {
   const [open, setOpen] = useState(false);
@@ -30,8 +32,8 @@ const ServiceOptionCard = ({
           {moment(verification_date.toDate()).format('MMM DD, YYYY')}
         </p>
         <div className="button-sc">
-          {!hideDirection && <GetDirections destination={name} />}
-          {phone_number.length > 0 && (
+          {!hideDirection && address && <GetDirections destination={address} />}
+          {checkPhoneNumberNotEmpty(phone_number) > 0 && (
             <CustomCardButton onClick={() => setOpen(true)} filled>
               Call
             </CustomCardButton>
@@ -45,7 +47,7 @@ const ServiceOptionCard = ({
         aria-labelledby="dailog-title"
         open={open}
       >
-        <DialogTitle id="dailog-tile">Choose number to call:</DialogTitle>
+        <DialogTitle id="dailog-tile">Tap a number to call:</DialogTitle>
         {phone_number.map((number) => (
           <a href={`tel:${number}`} className="phone-sc" key={number}>
             {number}
