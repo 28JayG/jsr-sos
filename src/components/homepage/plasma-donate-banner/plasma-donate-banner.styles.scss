@@ -1,11 +1,13 @@
 .plasma-donation-banner {
   width: 100%;
+  margin: 0 auto;
+  max-width: 576px;
   height: 150px;
   padding: 10px;
   position: relative;
   border-radius: 5px;
   background-color: white;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 

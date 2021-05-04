@@ -12,7 +12,6 @@ const ServicesOverviewSection = () => {
 
   return (
     <section className="services-overview-section">
-      <AppBar title="home" />
       <PlasmaDonateBanner />
       <div className="services">
         {!loading &&
