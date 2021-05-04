@@ -1,0 +1,24 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/text.styles.scss';
+
+.cstm-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $APP_DISABLED;
+
+  &.active {
+    color: $APP_DARK_BLUE;
+  }
+
+  .icon-bn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .text-bn {
+    @extend .app_text-button;
+    text-transform: capitalize;
+  }
+}

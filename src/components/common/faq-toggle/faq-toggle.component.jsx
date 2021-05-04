@@ -1,48 +1,40 @@
-import React, { useState } from "react";
-import ReactMarkdown from 'react-markdown'
-import "./faq-toggle.styles.scss";
+import React, { useState } from 'react';
 
-const data = [
-  {
-    header: "test1",
-    body: "body1",
-  },
-  {
-    header: "test2",
-    body: "body2",
-  },
-  {
-    header: "test3",
-    body: "Hello, **world**!",
-  },
-];
+import { IconChevronDown } from '@tabler/icons';
+import ReactMarkdown from 'react-markdown';
 
-const FaqToggle = () => {
-  const [selected, setSelected] = useState(null);
+import './faq-toggle.styles.scss';
 
-  const handleClick = (index) => {
-    if (selected === index) setSelected(null);
-    else setSelected(index);
+const FaqToggle = ({ faq, index }) => {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => setSelected((prevSelected) => !prevSelected);
+
+  const getHeight = () => {
+    var element = document.getElementsByClassName('sliding-content-ft');
+    return element[index].scrollHeight;
   };
 
   return (
-    <>
-      {data.map((item, index) => {
-        return (
-          <div className="faq-toggle">
-            <div className="sliding-header-ft">
-              <p>{item.header}</p>
-              <p onClick={() => handleClick(index)}>^</p>
-            </div>
-            {selected === index && (
-              <div className="sliding-content-ft">
-                <ReactMarkdown>{item.body}</ReactMarkdown>
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </>
+    <div className="faq-toggle">
+      <div className="sliding-header-ft" onClick={handleClick}>
+        <p>{faq.question}</p>
+        <IconChevronDown
+          size={12}
+          className={`icon-faq ${selected ? 'icon-faq__active' : ''}`}
+        />
+      </div>
+      <div
+        className="sliding-content-ft"
+        style={{
+          maxHeight: `${selected ? getHeight() + 'px' : 0}`,
+        }}
+      >
+        <div style={{ paddingTop: '20px' }}>
+          <ReactMarkdown>{faq.answer}</ReactMarkdown>
+        </div>
+      </div>
+    </div>
   );
 };
 
