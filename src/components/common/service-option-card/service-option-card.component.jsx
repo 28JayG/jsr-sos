@@ -14,6 +14,7 @@ const ServiceOptionCard = ({
   is_verified,
   verification_date,
   phone_number,
+  address,
   hideDirection,
 }) => {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,9 @@ const ServiceOptionCard = ({
           {moment(verification_date.toDate()).format('MMM DD, YYYY')}
         </p>
         <div className="button-sc">
-          {!hideDirection && <GetDirections destination={name} />}
+          {!hideDirection && address && (
+            <GetDirections destination={address} />
+          )}
           {phone_number.length > 0 && (
             <CustomCardButton onClick={() => setOpen(true)} filled>
               Call

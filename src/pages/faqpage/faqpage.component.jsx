@@ -3,6 +3,7 @@ import { ImagesLinks } from '../../constants/routes';
 import { FaqsContext } from '../../providers/faqs/faqs.provider';
 
 import Loader from '../../components/common/loader/loader.component';
+import MainContainer from '../../components/common/main-container/main-container.component';
 import BottomNav from '../../components/common/bottom-nav/bottom-nav.component';
 import FaqToggle from '../../components/common/faq-toggle/faq-toggle.component';
 import Appbar from '../../components/common/appbar/appbar.component';
@@ -35,22 +36,24 @@ const FaqsPage = () => {
     <div className="faqpage">
       <Appbar title="FAQs" />
       {/* here are faqs */}
-      {loading ? (
-        <Loader type="linear" />
-      ) : (
-        faqs &&
-        faqs.length > 0 && (
-          <section className="faqs">
-            {faqs.map((faq, index) => (
-              <FaqToggle faq={faq} index={index} key={faq.question} />
-            ))}
-          </section>
-        )
-      )}
+      <MainContainer>
+        {loading ? (
+          <Loader type="linear" />
+        ) : (
+          faqs &&
+          faqs.length > 0 && (
+            <section className="faqs">
+              {faqs.map((faq, index) => (
+                <FaqToggle faq={faq} index={index} key={faq.question} />
+              ))}
+            </section>
+          )
+        )}
+        <div className="banner">
+          <img src={ImagesLinks.VACCINE_IMAGE_URL} alt="vaccine le lo" />
+        </div>
+      </MainContainer>
       <BottomNav />
-      <div className="banner">
-        <img src={ImagesLinks.VACCINE_IMAGE_URL} alt="vaccine le lo" />
-      </div>
     </div>
   );
 };
