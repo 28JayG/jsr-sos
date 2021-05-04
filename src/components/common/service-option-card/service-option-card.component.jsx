@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 
 import CustomCardButton from '../custom-card-button/custom-card-button.component';
+
+import { Dialog, DialogTitle } from '@material-ui/core';
+import GetDirections from './get-directions/get-directions.component';
 
 import './service-option-card.styles.scss';
 
@@ -13,24 +16,43 @@ const ServiceOptionCard = ({
   phone_number,
   hideDirection,
 }) => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="service-card">
-      <div className="title-badge-sc">
-        <p className="title-sc">{name}</p>
-        {is_verified && <p className="badge-sc">verified</p>}
+    <>
+      <div className="service-card">
+        <div className="title-badge-sc">
+          <p className="title-sc">{name}</p>
+          {is_verified && <p className="badge-sc">verified</p>}
+        </div>
+        <p className="date-sc">
+          Verified on:{' '}
+          {moment(verification_date.toDate()).format('MMM DD, YYYY')}
+        </p>
+        <div className="button-sc">
+          {!hideDirection && <GetDirections destination={name} />}
+          {phone_number.length > 0 && (
+            <CustomCardButton onClick={() => setOpen(true)} filled>
+              Call
+            </CustomCardButton>
+          )}
+        </div>
       </div>
-      <p className="date-sc">
-        Verified on: {moment(verification_date.toDate()).format('MMM DD, YYYY')}
-      </p>
-      <div className="button-sc">
-        {!hideDirection && <CustomCardButton>Get Direction</CustomCardButton>}
-        {phone_number.length > 0 && (
-          <a href={`tel:${phone_number[0]}`}>
-            <CustomCardButton filled>Call</CustomCardButton>
+
+      {/* //phone number dailog */}
+      <Dialog
+        onClose={() => setOpen(false)}
+        aria-labelledby="dailog-title"
+        open={open}
+      >
+        <DialogTitle id="dailog-tile">Choose number to call:</DialogTitle>
+        {phone_number.map((number) => (
+          <a href={`tel:${number}`} className="phone-sc" key={number}>
+            {number}
           </a>
-        )}
-      </div>
-    </div>
+        ))}
+      </Dialog>
+    </>
   );
 };
 

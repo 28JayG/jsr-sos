@@ -18,6 +18,7 @@ export const InternalRoutes = {
 export const ExternalLinks = {
   PLASMA_DONATE_FORM_LINK: '#',
   HELPLINE_NUMBER: '06572221717',
+  COWIN_REGISTER_LINK: ' https://www.cowin.gov.in/home',
 };
 
 //external assets links
