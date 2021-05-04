@@ -7,3 +7,6 @@ export const needDirectionsFor = (service) => {
       return true;
   }
 };
+
+export const checkPhoneNumberNotEmpty = (phone_number) =>
+  phone_number.length > 0 && phone_number.every((number) => !!number);
