@@ -17,6 +17,13 @@ export const InternalRoutes = {
 //routes or links external to the app
 export const ExternalLinks = {
   PLASMA_DONATE_FORM_LINK: '#',
+  HELPLINE_NUMBER: '06572221717',
+};
+
+//external assets links
+export const ImagesLinks = {
+  PLASMA_DONATE_IMAGE_URL: 'https://i.ibb.co/tb5rwDD/Home-banner.png',
+  VACCINE_IMAGE_URL: 'https://i.ibb.co/m8swsgj/Vaccination-bannar.png',
 };
 
 const navIconStyles = { stroke: 1 };
