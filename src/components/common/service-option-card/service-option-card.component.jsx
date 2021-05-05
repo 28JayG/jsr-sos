@@ -8,6 +8,7 @@ import GetDirections from './get-directions/get-directions.component';
 
 import './service-option-card.styles.scss';
 import { checkPhoneNumberNotEmpty } from '../../../utils/utils';
+import { IconPhone } from '@tabler/icons';
 
 const ServiceOptionCard = ({
   id,
@@ -47,10 +48,10 @@ const ServiceOptionCard = ({
         aria-labelledby="dailog-title"
         open={open}
       >
-        <DialogTitle id="dailog-tile">Tap a number to call:</DialogTitle>
         {phone_number.map((number) => (
           <a href={`tel:${number}`} className="phone-sc" key={number}>
             {number}
+            <IconPhone />
           </a>
         ))}
       </Dialog>
