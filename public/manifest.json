@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Jsr-SOS",
+  "name": "An App to for Covid-19 Resources",
   "icons": [
     {
       "src": "favicon.ico",
