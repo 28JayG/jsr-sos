@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ServicesContext } from '../../../providers/services/services.provider';
 
-import AppBar from '../../common/appbar/appbar.component';
 import PlasmaDonateBanner from '../plasma-donate-banner/plasma-donate-banner.component';
 import ServiceTile from './service-tile/service-tile.component';
 

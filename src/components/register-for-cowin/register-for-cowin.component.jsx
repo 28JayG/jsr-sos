@@ -8,6 +8,7 @@ const RegisterForCowin = () => {
     <a
       href={ExternalLinks.COWIN_REGISTER_LINK}
       target="_blank"
+      rel="noreferrer"
       className="rfc-button"
     >
       Register for COWIN
