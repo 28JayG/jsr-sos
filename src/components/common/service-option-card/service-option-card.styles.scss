@@ -56,6 +56,10 @@
 
 .phone-sc{
   padding: 15px;
+  width: 236px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
   &:focus, &:hover{
     background-color: rgba($color: $APP_DISABLED, $alpha: 0.2);

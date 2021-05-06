@@ -1,9 +1,13 @@
-import React from 'react';
-import './bottom-nav.styles.scss';
+import React, { useState } from 'react';
 import { bottomNavRoutes, ExternalLinks } from '../../../constants/routes';
-import CustomNavLink from './nav-link/nav-link.component';
 
+import CustomNavLink from './nav-link/nav-link.component';
+import {IconPhone} from '@tabler/icons'
+import { Dialog, DialogTitle } from '@material-ui/core';
+
+import './bottom-nav.styles.scss';
 const BottomNav = () => {
+  const [dailogOpen, setOpen] = useState(false);
   const { helpline, home, faqs, doctor } = bottomNavRoutes;
 
   return (
@@ -20,14 +24,25 @@ const BottomNav = () => {
         {/* faqs link */}
         <CustomNavLink title={faqs.title} icon={faqs.icon()} to={faqs.route} />
         {/* helpline caller link */}
-        <a href={`tel:${ExternalLinks.HELPLINE_NUMBER}`} className="nav-link">
+        <div onClick={() => setOpen(true)} className="nav-link">
           {helpline.icon()}
           <p className="text-bn">{helpline.title}</p>
-        </a>
+        </div>
       </div>
+
+      <Dialog
+        onClose={() => setOpen(false)}
+        aria-labelledby="dailog-title"
+        open={dailogOpen}
+      >
+        <DialogTitle id="dailog-title">East Singhbhum Helpline:</DialogTitle>
+        <a href={`tel:${ExternalLinks.HELPLINE_NUMBER}`} className="phone-bn">
+          {ExternalLinks.HELPLINE_NUMBER}
+          <IconPhone />
+        </a>
+      </Dialog>
     </div>
   );
 };
 
 export default BottomNav;
-

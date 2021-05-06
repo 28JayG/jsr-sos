@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import moment from 'moment';
+import { checkPhoneNumberNotEmpty } from '../../../utils/utils';
 
 import CustomCardButton from '../custom-card-button/custom-card-button.component';
-
-import { Dialog, DialogTitle } from '@material-ui/core';
+import { Dialog } from '@material-ui/core';
+import { IconPhone } from '@tabler/icons';
 import GetDirections from './get-directions/get-directions.component';
 
 import './service-option-card.styles.scss';
-import { checkPhoneNumberNotEmpty } from '../../../utils/utils';
 
 const ServiceOptionCard = ({
   id,
@@ -41,16 +41,16 @@ const ServiceOptionCard = ({
         </div>
       </div>
 
-      {/* //phone number dailog */}
+      {/* phone number dailog */}
       <Dialog
         onClose={() => setOpen(false)}
         aria-labelledby="dailog-title"
         open={open}
       >
-        <DialogTitle id="dailog-tile">Tap a number to call:</DialogTitle>
         {phone_number.map((number) => (
           <a href={`tel:${number}`} className="phone-sc" key={number}>
             {number}
+            <IconPhone />
           </a>
         ))}
       </Dialog>

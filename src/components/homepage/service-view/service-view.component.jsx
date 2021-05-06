@@ -36,11 +36,7 @@ const ServiceView = ({ match }) => {
           {options &&
             options.length > 0 &&
             options.map((option) => (
-              <ServiceOptionCard
-                hideDirection={!needDirectionsFor(serviceId)}
-                {...option}
-                key={option.id}
-              />
+              <ServiceOptionCard {...option} key={option.id} />
             ))}
         </section>
         {serviceId === 'vaccines' && (
