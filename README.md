@@ -32,6 +32,8 @@ Having faced the problem of tracking down verified leads for resources during th
 
 There are a lot of helpful apps/websites out there providing information about necessary resources during these trying times. Then why are we adding to this already existing pile of sites? Because all these sites have very few to no leads for our hometown. Some doesn't even have the name Jamshedpur(Jsr) in it. You have to search Jharkhand and see if there are a few of the twitter posts addressed to Jsr. The situation is worsening with each passing day and we had to do soemthing. In an attempt to solve the problem of looking for resources, we built jsr-sos.
 
+<h4 style="font-weight:bold" id="contributing">Please Refere to the Disclaimer here <a src="https://github.com/28JayG/jsr-sos/blob/master/disclaimer.md">disclaimer.md</a>.</h4>
+
 <h2 align="center" style="font-weight:bold" id="contributing">Core Team</h2>
 
 - [Jay Gandhi](https://github.com/28JayG)
