@@ -1,16 +1,23 @@
-import React from 'react'
-import './add-resources.styles.scss'
+import React from 'react';
+import { ExternalLinks } from '../../../constants/routes';
 
-const AddResources = ({children, ...otherButtonProps}) => {
-    return (
-        <div className="banner-ar">
-            <p className="text-ar">If you have resources please add</p>
-             <button className="btn-ar" {...otherButtonProps}>
-                {children}
-             </button>
-        </div>
-       
-    )
-}
+import BannerCallToAction from '../banner-call-to-action/banner-call-to-action.component';
 
-export default AddResources
+import './add-resources.styles.scss';
+
+const AddResources = () => {
+  return (
+    <div className="banner-ar">
+      <p className="text-ar">If you have resources please add</p>
+      <a
+        href={ExternalLinks.ADD_RESOURCES_FORM_LINK}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <BannerCallToAction>Add Resources</BannerCallToAction>
+      </a>
+    </div>
+  );
+};
+
+export default AddResources;

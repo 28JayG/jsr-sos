@@ -19,6 +19,8 @@ export const ExternalLinks = {
   PLASMA_DONATE_FORM_LINK: '#',
   HELPLINE_NUMBER: '06572221717',
   COWIN_REGISTER_LINK: ' https://www.cowin.gov.in/home',
+  ADD_RESOURCES_FORM_LINK:
+    'https://docs.google.com/forms/d/e/1FAIpQLSdpXrlMbptq8_sjMf2ZHjQBRBvXUg-wvF278SfZvBLjZXxcEA/viewform',
 };
 
 //external assets links

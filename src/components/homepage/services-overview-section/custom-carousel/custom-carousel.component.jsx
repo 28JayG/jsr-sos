@@ -15,6 +15,7 @@ const CustomCarousel = ({ children }) => {
       interval={3000}
       showStatus={false}
       showIndicators={false}
+      showThumbs={false}
       //right arrow
       renderArrowNext={(onClickHandler, _, label) => (
         <CarouselArrowRight
