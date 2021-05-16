@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ServicesContext } from '../../../providers/services/services.provider';
 import { needDirectionsFor } from '../../../utils/utils';
+import AddResources from '../../common/add-resources/add-resources.component';
 
 import AppBar from '../../common/appbar/appbar.component';
 import Loader from '../../common/loader/loader.component';
@@ -31,8 +32,11 @@ const ServiceView = ({ match }) => {
       {/* subpage show that the current route is a part of some other route */}
       <AppBar title={title} subPage />
       {loading && <Loader type="linear" />}
+
       <MainContainer>
         <section className="service-options-container">
+          <AddResources />
+          <div style={{paddingBottom: `25px`}} />
           {options &&
             options.length > 0 &&
             options.map((option) => (
@@ -47,6 +51,7 @@ const ServiceView = ({ match }) => {
           </div>
         )}
       </MainContainer>
+
     </div>
   );
 };

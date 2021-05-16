@@ -3,6 +3,13 @@ import {
   firestore,
 } from '../../firebase/firebase.utils';
 
+/* basic flow:
+   1) create collection ref(with correct collection name or path)
+   2) get snapshot using ref.get()
+   3) stucture docs acc. to your reqirement
+   4) return it
+*/
+
 export const fetchServicesAsync = async () => {
   const serviesRef = firestore.collection('services');
 
@@ -24,4 +31,13 @@ export const fetchServiceOptions = async (serviceID) => {
   }));
 
   return serviceOptions;
+};
+
+export const fetchBanners = async () => {
+  const bannersRef = firestore.collection('banners');
+
+  const snapshot = await bannersRef.get();
+  const banners = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+  return banners;
 };

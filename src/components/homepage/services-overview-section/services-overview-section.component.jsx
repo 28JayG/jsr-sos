@@ -1,17 +1,30 @@
 import React, { useContext } from 'react';
 import { ServicesContext } from '../../../providers/services/services.provider';
 
-import PlasmaDonateBanner from '../plasma-donate-banner/plasma-donate-banner.component';
+import Banner from '../banner/banner.component';
+import CustomCarousel from './custom-carousel/custom-carousel.component';
 import ServiceTile from './service-tile/service-tile.component';
 
 import './services-overview-section.styles.scss';
 
-const ServicesOverviewSection = () => {
+const ServicesOverviewSection = ({ banners }) => {
   const { services, loading } = useContext(ServicesContext);
+
+  /* banner structure: link, button_color, button_text, imageUrl */
 
   return (
     <section className="services-overview-section">
-      <PlasmaDonateBanner />
+      <CustomCarousel>
+        {banners &&
+          banners.map(({ link, button_color, button_text, imageUrl }) => (
+            <Banner
+              href={link}
+              bgImage={imageUrl}
+              ctaText={button_text}
+              ctaColor={button_color}
+            />
+          ))}
+      </CustomCarousel>
       <div className="services">
         {!loading &&
           services &&

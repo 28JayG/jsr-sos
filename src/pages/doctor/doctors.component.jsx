@@ -8,6 +8,7 @@ import Loader from '../../components/common/loader/loader.component';
 import ServiceOptionCard from '../../components/common/service-option-card/service-option-card.component';
 
 import './doctors.styles.scss';
+import AddResources from '../../components/common/add-resources/add-resources.component';
 
 const Doctors = () => {
   const [loading, setLoading] = useState(false);
@@ -33,10 +34,12 @@ const Doctors = () => {
   return (
     <div className="doctors-page">
       <AppBar title="Doctors" />
-      
+
       <MainContainer>
         {loading && <Loader type="linear" />}
         <section className="doctors-container">
+          <AddResources />
+          <div style={{ paddingBottom: '25px' }} />
           {doctors &&
             doctors.length > 0 &&
             doctors.map((doctor) => {
