@@ -43,9 +43,11 @@ const FaqsPage = () => {
           faqs &&
           faqs.length > 0 && (
             <section className="faqs">
-              {faqs.map((faq, index) => (
-                <FaqToggle faq={faq} index={index} key={faq.question} />
-              ))}
+              {faqs
+                .sort((a, b) => a.serial_no - b.serial_no)
+                .map((faq, index) => (
+                  <FaqToggle faq={faq} index={index} key={faq.serial_no} />
+                ))}
             </section>
           )
         )}

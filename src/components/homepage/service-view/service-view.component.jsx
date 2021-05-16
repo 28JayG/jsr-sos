@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ServicesContext } from '../../../providers/services/services.provider';
-import { needDirectionsFor } from '../../../utils/utils';
 import AddResources from '../../common/add-resources/add-resources.component';
 
 import AppBar from '../../common/appbar/appbar.component';

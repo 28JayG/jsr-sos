@@ -24,8 +24,6 @@ const Homepage = () => {
     getBannersAsync();
   }, []);
 
-  console.log(banners);
-
   return (
     <div className="homepage">
       <AppBar title="home" />

@@ -16,12 +16,13 @@ const ServicesOverviewSection = ({ banners }) => {
     <section className="services-overview-section">
       <CustomCarousel>
         {banners &&
-          banners.map(({ link, button_color, button_text, imageUrl }) => (
+          banners.map(({ id, link, button_color, button_text, imageUrl }) => (
             <Banner
               href={link}
               bgImage={imageUrl}
               ctaText={button_text}
               ctaColor={button_color}
+              key={id}
             />
           ))}
       </CustomCarousel>
