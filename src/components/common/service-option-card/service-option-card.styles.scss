@@ -3,10 +3,10 @@
 
 .service-card {
   width: 100%;
-  height: 100px;
+  height: 120px;
   border-radius: 5px;
   background-color: white;
-  border: 1px solid $APP_LIGHT_BLUE;
+  border: 1px solid $APP_CARD_BORDER;
   margin: 0 auto;
   padding: 8px;
   position: relative;
@@ -44,13 +44,26 @@
     @extend .app_text-banner;
     margin: 0px;
   }
-
-  .button-sc {
+  .card-bottom-sc{
     display: flex;
     justify-content: flex-end;
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
+    
+
+    .button-sc {
+      display: flex;
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+    }
+
+    .share-sc{
+      bottom: 8px;
+      right: 8px;
+      color: $APP_CARD_BORDER;
+      position:absolute;
+      height: 20px;
+      width: 20px;
+    }
   }
 }
 

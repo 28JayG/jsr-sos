@@ -4,7 +4,7 @@ import { checkPhoneNumberNotEmpty } from '../../../utils/utils';
 
 import CustomCardButton from '../custom-card-button/custom-card-button.component';
 import { Dialog } from '@material-ui/core';
-import { IconPhone } from '@tabler/icons';
+import { IconPhone, IconShare } from '@tabler/icons';
 import GetDirections from './get-directions/get-directions.component';
 
 import './service-option-card.styles.scss';
@@ -31,14 +31,19 @@ const ServiceOptionCard = ({
           Verified on:{' '}
           {moment(verification_date.toDate()).format('MMM DD, YYYY')}
         </p>
-        <div className="button-sc">
-          {!hideDirection && address && <GetDirections destination={address} />}
-          {checkPhoneNumberNotEmpty(phone_number) > 0 && (
-            <CustomCardButton onClick={() => setOpen(true)} filled>
-              Call
-            </CustomCardButton>
-          )}
+        <div className="card-bottom-sc">
+          <div className="button-sc">
+            {!hideDirection && address && <GetDirections destination={address} />}
+            {checkPhoneNumberNotEmpty(phone_number) > 0 && (
+              <CustomCardButton onClick={() => setOpen(true)} filled>
+                Call
+              </CustomCardButton>
+            )}
+          </div>
+              
+              <IconShare className="share-sc"/>
         </div>
+        
       </div>
 
       {/* phone number dailog */}

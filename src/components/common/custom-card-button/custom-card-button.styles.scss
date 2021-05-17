@@ -5,14 +5,16 @@
   @extend .app_text-h4-medium;
   border-radius: 5px;
   min-width: 70px;
-  padding: 4px 10px;
+  padding: 4px 0;
   background-color: transparent;
   text-transform: capitalize;
-  border: 1px solid $APP_LIGHT_BLUE;
-  margin-left: 13px;
+  margin-top: 5px;
+  margin-right: 13px;
+  border: none;
+  color: $APP_LIGHT_BLUE;
 }
 
 .filled {
-  background-color: $APP_LIGHT_BLUE;
-  color: white;
+  color: $APP_LIGHT_BLUE;
+  border: none
 }
