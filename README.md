@@ -16,7 +16,7 @@ Centralised platform for covid-19 relief resources in Jamshedpur
 </p>
 
 <p align="center">
-  <a style="padding: 0 10px;" target="#" href="https://jsrsos.co.in/![WhatsApp Image 2021-05-04 at 19 44 56](https://user-images.githubusercontent.com/43542057/117018811-7b9f8300-ad12-11eb-8a23-e77b84445f50.jpeg)
+  <a style="padding: 0 10px;" target="#" href="https://jsr-sos.web.app/![WhatsApp Image 2021-05-04 at 19 44 56](https://user-images.githubusercontent.com/43542057/117018811-7b9f8300-ad12-11eb-8a23-e77b84445f50.jpeg)
 ">Website</a>
 </p>
 
